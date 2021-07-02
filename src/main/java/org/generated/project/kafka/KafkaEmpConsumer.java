@@ -13,7 +13,7 @@ public class KafkaEmpConsumer implements ConsumerListener<String, JsonNode> {
     
 	@Logging
     private Logger logger;
- 
+	
     @Override
     public void onConsumerRecord(ConsumerRecord<String, JsonNode> r) {
         logger.info("Received {}:{}", r.key(), r.value());
