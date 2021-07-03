@@ -44,4 +44,20 @@ public class StudentController {
 	{
 		return stdService.getAllStudents();
 	}
+	
+	@GET
+	@Path("getStudentsByFname/{fname}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Student> getStudentsByFname(@PathParam("fname") String fname)
+	{
+		return stdService.getStudentsByFname(fname);
+	}
+	
+	@GET
+	@Path("getStudentsByFnameOrLname/{fnameOrLname}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Student> getStudentsByFnameOrLname(@PathParam("fnameOrLname") String fnameOrLname)
+	{
+		return stdService.getStudentsByFnameOrLaname(fnameOrLname);
+	}
 }

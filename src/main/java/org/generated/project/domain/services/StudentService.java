@@ -13,4 +13,8 @@ public interface StudentService {
 	public Student getStudent(Integer id);
 	
 	public List<Student> getAllStudents();
+	
+	public List<Student> getStudentsByFname(String fname);
+	
+	public List<Student> getStudentsByFnameOrLaname(String fnameOrLname);
 }
