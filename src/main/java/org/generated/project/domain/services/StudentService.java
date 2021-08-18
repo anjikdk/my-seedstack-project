@@ -17,4 +17,6 @@ public interface StudentService {
 	public List<Student> getStudentsByFname(String fname);
 	
 	public List<Student> getStudentsByFnameOrLaname(String fnameOrLname);
+	
+	public List<Student> getAllStudentsByUsingSpecification();
 }

@@ -60,4 +60,12 @@ public class StudentController {
 	{
 		return stdService.getStudentsByFnameOrLaname(fnameOrLname);
 	}
+	
+	@GET
+	@Path("getAllStudents")
+	@Produces(MediaType.APPLICATION_JSON)
+	public List<Student> getAllStudentList()
+	{
+		return stdService.getAllStudentsByUsingSpecification();
+	}
 }

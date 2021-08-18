@@ -49,7 +49,6 @@ public class StudentServiceImpl implements StudentService
 	@JpaUnit("myUnit")
 	public List<Student> getAllStudents() {
 
-
 		return stdCustomRepository.getAllStudents();
 	}
 
@@ -77,5 +76,13 @@ public class StudentServiceImpl implements StudentService
 				.build();
 		
 		return stdRepository.get(stdSpec).collect(Collectors.toList());
+	}
+	
+	@Override
+	@Transactional
+	@JpaUnit("myUnit")
+	public List<Student> getAllStudentsByUsingSpecification() {
+
+		return stdCustomRepository.getAllStudentsByUsingSpecification();
 	}
 }
